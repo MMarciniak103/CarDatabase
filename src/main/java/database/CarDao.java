@@ -11,11 +11,5 @@ public class CarDao  extends CommonDao {
         super();
     }
 
-    public void deleteByColumnName(String columnName,int id) throws SQLException {
-        Dao<Car,Object>dao=getDao(Car.class);
-        DeleteBuilder<Car,Object>deleteBuilder=dao.deleteBuilder();
-        deleteBuilder.where().eq(columnName,id );
-        dao.delete(deleteBuilder.prepare());
 
-    }
 }
