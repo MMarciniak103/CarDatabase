@@ -1,0 +1,8 @@
+1 car name:  skylark 320 | and 2 car name:  504
+1 car brand: buick | and 2 car brand: peugeot
+1 car mpg: 15.0 | and 2 car mpg: 25.0
+1 car cylinders: 8 | and 2 car cylinders: 4
+1 car horsepower: 165 | and 2 car horsepower: 87
+1 car weight: 3693 | and 2 car weight: 2672
+1 car acceleration: 11.5 | and 2 car acceleration: 17.5
+1 car year: 70 | and 2 car year: 70
