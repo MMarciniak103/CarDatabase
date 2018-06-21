@@ -232,14 +232,7 @@ public class CarsListController  {
         this.originComboBox.setItems(this.carListModel.getCarOrigin());
     }
 
-    private void checkButton(Button button){
-        if(carsTableView.getSelectionModel().getSelectedItem()==null){
-            button.setDisable(true);
-        }
-        else if(carsTableView.getSelectionModel().getSelectedItem()!=null){
-            button.setDisable(false);
-        }
-    }
+
 
     private Button createButton(String path){
         Button button=new Button();

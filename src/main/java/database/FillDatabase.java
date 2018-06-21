@@ -55,10 +55,6 @@ public class FillDatabase {
     private static void readData() throws IOException {
         FileReader fr=null;
         String line="";
-        ArrayList<String> temporary=new ArrayList<>();
-        ArrayList<String> temp=new ArrayList<>();
-
-
         try {
             fr=new FileReader("cars.txt");
         } catch (FileNotFoundException e) {

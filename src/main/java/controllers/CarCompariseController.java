@@ -111,39 +111,43 @@ public class CarCompariseController {
 
             colorTextFieldsComparision();
 
-            FileWriter fw = null;
-            try {
-                fw = new FileWriter("comparision.txt");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            BufferedWriter bw = new BufferedWriter(fw);
-            try {
-                bw.write("1 car name: " + nameTextField.textProperty().getValue() + " | and 2 car name: " +carsTableView.getSelectionModel().getSelectedItem().getName());
-                bw.newLine();
-                bw.write("1 car brand: "+brandTextField.textProperty().getValue()+" | and 2 car brand: "+carsTableView.getSelectionModel().getSelectedItem().getBrand());
-                bw.newLine();
-                bw.write("1 car mpg: "+mpgTextField.textProperty().getValue()+" | and 2 car mpg: "+carsTableView.getSelectionModel().getSelectedItem().getMpg());
-                bw.newLine();
-                bw.write("1 car cylinders: "+cylindersTextField.textProperty().getValue()+" | and 2 car cylinders: "+carsTableView.getSelectionModel().getSelectedItem().getCylinders());
-                bw.newLine();
-                bw.write("1 car horsepower: "+horsepowerTextField.textProperty().getValue()+" | and 2 car horsepower: "+carsTableView.getSelectionModel().getSelectedItem().getHorsepower());
-                bw.newLine();
-                bw.write("1 car weight: "+weightTextField.textProperty().getValue()+" | and 2 car weight: "+carsTableView.getSelectionModel().getSelectedItem().getWeight());
-                bw.newLine();
-                bw.write("1 car acceleration: "+accelerationTextField.textProperty().getValue()+" | and 2 car acceleration: "+carsTableView.getSelectionModel().getSelectedItem().getAcceleration());
-                bw.newLine();
-                bw.write("1 car year: "+yearTextField.textProperty().getValue()+" | and 2 car year: "+carsTableView.getSelectionModel().getSelectedItem().getYear());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                bw.close();
-                fw.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            saveInTextFile();
 
+        }
+    }
+
+    private void saveInTextFile() {
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter("comparision.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        BufferedWriter bw = new BufferedWriter(fw);
+        try {
+            bw.write("1 car name: " + nameTextField.textProperty().getValue() + " | and 2 car name: " +carsTableView.getSelectionModel().getSelectedItem().getName());
+            bw.newLine();
+            bw.write("1 car brand: "+brandTextField.textProperty().getValue()+" | and 2 car brand: "+carsTableView.getSelectionModel().getSelectedItem().getBrand());
+            bw.newLine();
+            bw.write("1 car mpg: "+mpgTextField.textProperty().getValue()+" | and 2 car mpg: "+carsTableView.getSelectionModel().getSelectedItem().getMpg());
+            bw.newLine();
+            bw.write("1 car cylinders: "+cylindersTextField.textProperty().getValue()+" | and 2 car cylinders: "+carsTableView.getSelectionModel().getSelectedItem().getCylinders());
+            bw.newLine();
+            bw.write("1 car horsepower: "+horsepowerTextField.textProperty().getValue()+" | and 2 car horsepower: "+carsTableView.getSelectionModel().getSelectedItem().getHorsepower());
+            bw.newLine();
+            bw.write("1 car weight: "+weightTextField.textProperty().getValue()+" | and 2 car weight: "+carsTableView.getSelectionModel().getSelectedItem().getWeight());
+            bw.newLine();
+            bw.write("1 car acceleration: "+accelerationTextField.textProperty().getValue()+" | and 2 car acceleration: "+carsTableView.getSelectionModel().getSelectedItem().getAcceleration());
+            bw.newLine();
+            bw.write("1 car year: "+yearTextField.textProperty().getValue()+" | and 2 car year: "+carsTableView.getSelectionModel().getSelectedItem().getYear());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            bw.close();
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
