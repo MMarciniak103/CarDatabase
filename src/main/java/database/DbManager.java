@@ -15,11 +15,8 @@ public class DbManager  {
 
     public static final Logger LOGGER= LoggerFactory.getLogger(DbManager.class);
 
-    private static final String JDBC_DRIVER_HD = "jdbc:h2:./libraryDB";
     private static final String JDBC_DRIVER_SQLITe="jdbc:sqlite:bazadanych.db";
 
-    private static final String USER = "admin";
-    private static final String PASS = "admin";
 
     private static ConnectionSource connectionSource;
     private static DatabaseConnection databaseConnection;
